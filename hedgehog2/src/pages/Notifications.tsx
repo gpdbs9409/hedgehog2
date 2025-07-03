@@ -11,4 +11,4 @@ const Notifications = () => (
   </div>
 );
 
-export default Notifications; 
+export default Notifications;

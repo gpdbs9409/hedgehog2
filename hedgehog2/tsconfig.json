@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "strict": false,
-    "skipLibCheck": true
-  }
-}

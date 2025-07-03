@@ -11,4 +11,4 @@ const Mypage = () => (
   </div>
 );
 
-export default Mypage; 
+export default Mypage;

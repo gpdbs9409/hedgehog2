@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
-import { fetchExchangeRates, fetchExchangeRateHistory } from '../services/exchangeRateService';
+import { useEffect, useState } from "react";
+import {
+  fetchExchangeRateHistory,
+  fetchExchangeRates,
+} from "../services/exchangeRateService";
 
 interface ChartData {
   time: string;
@@ -9,13 +12,13 @@ interface ChartData {
 
 interface ExchangeRate {
   currency: string;
-  bid: number;
-  ask: number;
-  high: number;
-  low: number;
-  change: number;
-  changePercent: number;
-  time: string;
+  // bid: number;
+  // ask: number;
+  // high: number;
+  // low: number;
+  // change: number;
+  // changePercent: number;
+  // time: string;
   chartData: ChartData[];
 }
 
@@ -31,10 +34,10 @@ export const useExchangeRates = () => {
         const ratesWithChartData = await Promise.all(
           exchangeRates.map(async (rate) => {
             const historyData = await fetchExchangeRateHistory(rate.currency);
-            const chartData = historyData.map(data => ({
+            const chartData = historyData.map((data) => ({
               time: data.time,
               bid: data.value,
-              ask: data.value + (Math.random() * 0.1 + 0.1) // 실제로는 API에서 매도가도 함께 받아와야 합니다
+              ask: data.value + (Math.random() * 0.1 + 0.1), // 실제로는 API에서 매도가도 함께 받아와야 합니다
             }));
             return { ...rate, chartData };
           })
@@ -42,8 +45,8 @@ export const useExchangeRates = () => {
         setRates(ratesWithChartData);
         setError(null);
       } catch (err) {
-        setError('환율 정보를 가져오는데 실패했습니다');
-        console.error('Error fetching exchange rates:', err);
+        setError("환율 정보를 가져오는데 실패했습니다");
+        console.error("Error fetching exchange rates:", err);
       } finally {
         setLoading(false);
       }
@@ -58,4 +61,4 @@ export const useExchangeRates = () => {
   return { rates, loading, error };
 };
 
-export default useExchangeRates; 
+export default useExchangeRates;

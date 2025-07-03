@@ -1,7 +1,7 @@
-import ExchangeDashboard from '../components/ExchangeDashboard';
+import ExchangeDashboard from "../components/ExchangeDashboard";
 
 const Home = () => {
   return <ExchangeDashboard />;
 };
 
-export default Home; 
+export default Home;
