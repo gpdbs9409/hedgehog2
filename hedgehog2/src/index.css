@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-50 to-blue-50 m-0 min-h-screen font-sans text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 p-6 border border-gray-100;
+  }
+
+  .currency-card {
+    @apply card hover:scale-105 cursor-pointer;
+  }
+
+  .currency-value {
+    @apply text-4xl font-bold text-gray-900 tracking-tight;
+  }
+
+  .currency-change-positive {
+    @apply text-green-600 font-medium flex items-center gap-1;
+  }
+
+  .currency-change-negative {
+    @apply text-red-600 font-medium flex items-center gap-1;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-gray-900 mb-6;
+  }
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 0px #ffe066; opacity: 1; transform: scale(1);}
+  50% { box-shadow: 0 0 16px #ffe066; opacity: 0.7; transform: scale(1.08);}
+  100% { box-shadow: 0 0 0px #ffe066; opacity: 1; transform: scale(1);}
+}
+.animate-glow {
+  animation: glow 0.7s;
+}

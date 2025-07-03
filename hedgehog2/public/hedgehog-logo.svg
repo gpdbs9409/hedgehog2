@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="256" cy="256" r="256" fill="#0284C7"/>
+  <path d="M256 120C180 120 120 180 120 256C120 332 180 392 256 392C332 392 392 332 392 256C392 180 332 120 256 120ZM256 352C202 352 160 310 160 256C160 202 202 160 256 160C310 160 352 202 352 256C352 310 310 352 256 352Z" fill="#FFFFFF"/>
+  <path d="M256 280C229 280 207 302 207 329H305C305 302 283 280 256 280Z" fill="#FFFFFF"/>
+  <text x="256" y="420" text-anchor="middle" font-size="48" font-family="Arial" fill="#FFFFFF" font-weight="bold">HedgeHog</text>
+</svg> 
